@@ -1,10 +1,12 @@
 import Wrapper from '../styled-components/Navbar';
 import { checkIfDarkTheme } from '../App';
 import { useState } from 'react';
+import { useLayoutContext } from '../pages/Layout';
 
 const Navbar = () => {
+    const { toggleMenu } = useLayoutContext();
     const [isDarkTheme, setIsDarkTheme] = useState(checkIfDarkTheme());
-    console.log(isDarkTheme);
+
     return (
         <Wrapper>
             <div className="left">
@@ -19,7 +21,7 @@ const Navbar = () => {
                 <h1>Logo / Title</h1>
             </div>
             <div className="right">
-                <button>
+                <button onClick={toggleMenu}>
                     Open Menu
                 </button>
             </div>

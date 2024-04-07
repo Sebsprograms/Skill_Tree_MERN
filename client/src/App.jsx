@@ -2,7 +2,7 @@ import {
   createBrowserRouter,
   RouterProvider
 } from 'react-router-dom'
-import { Layout, Landing } from './pages';
+import { Layout, Landing, SkillTree } from './pages';
 
 export const checkIfDarkTheme = () => {
   const isDarkTheme = localStorage.getItem('darkTheme') === 'true';
@@ -14,7 +14,8 @@ checkIfDarkTheme();
 const router = createBrowserRouter([
   {
     path: '/', element: <Layout />, children: [
-      { index: true, element: <Landing /> }
+      { index: true, element: <Landing /> },
+      { path: 'skill-tree', element: <SkillTree /> }
     ]
   }
 ]);
