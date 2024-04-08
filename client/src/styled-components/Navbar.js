@@ -7,6 +7,20 @@ const Wrapper = styled.nav`
     justify-content: space-between;
     align-items: center;
     padding: 0 1rem;
+    .toggle-btn {
+        cursor: pointer;
+        font-size: 24px;
+        padding: 0;
+        margin: 0;
+        line-height: 0;
+    }
+    .menu-btn {
+        cursor: pointer;
+        font-size: 40px;
+        padding: 0;
+        margin: 0;
+        line-height: 0;
+    }
 `;
 
 export default Wrapper;

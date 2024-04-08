@@ -5,6 +5,7 @@ const SideMenu = () => {
     const { showMenu } = useLayoutContext();
     return (
         <Wrapper>
+
             <div className={showMenu ? 'show-menu menu-container' : 'menu-container'}>
 
                 Side Menu

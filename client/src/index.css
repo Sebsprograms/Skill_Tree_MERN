@@ -8,10 +8,14 @@
 
 :root {
   /* Colors */
-  --main-color: #f4f4f4;
-  --main-color-dark: #333;
-  --secondary-color: #fcc;
-  --secondary-color-dark: #400;
+  --main-color: #fff;
+  --secondary-color: #f8f9fa;
+  --main-color-dark: #1e1e1e;
+  --secondary-color-dark: #343a40;
+  --accent-color: #FFA500;
+  --secondary-accent-color: #6c757d;
+  --button-color: #007bff;
+  --button-hover-color: #0056b3;
 
   --black: #222;
   --white: #fff;
@@ -31,6 +35,22 @@
   --primary-bg-color: var(--main-color-dark);
   --secondary-bg-color: var(--secondary-color-dark);
   --primary-text-color: var(--white);
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: var(--button-color);
+  color: var(--white);
+  font-size: 1rem;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn:hover {
+  background-color: var(--button-hover-color);
 }
 
 body {
