@@ -1,7 +1,9 @@
+import { Link } from 'react-router-dom';
+
 const Landing = () => {
     return (
         <div>
-            Landing
+            <Link className='btn' to='/skill-tree'>Go to Skill Tree</Link>
         </div>
     );
 }

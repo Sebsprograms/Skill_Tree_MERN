@@ -1,29 +1,37 @@
 import Wrapper from '../styled-components/Navbar';
-import { checkIfDarkTheme } from '../App';
-import { useState } from 'react';
 import { useLayoutContext } from '../pages/Layout';
+import { IoMdSunny } from "react-icons/io";
+import { IoMdMoon } from "react-icons/io";
+import { IoClose } from "react-icons/io5";
+import { CgMenuGridO } from "react-icons/cg";
+
+
+
 
 const Navbar = () => {
-    const { toggleMenu } = useLayoutContext();
-    const [isDarkTheme, setIsDarkTheme] = useState(checkIfDarkTheme());
+    const {
+        toggleMenu,
+        showMenu,
+        toggleDarkTheme,
+        isDarkTheme
+    } = useLayoutContext();
+
 
     return (
         <Wrapper>
             <div className="left">
-                <button onClick={() => {
-                    localStorage.setItem('darkTheme', !isDarkTheme);
-                    setIsDarkTheme(!isDarkTheme);
-                }}>
-                    {isDarkTheme ? 'Light Theme' : 'Dark Theme'}
-                </button>
+                <div className='toggle-btn' onClick={toggleDarkTheme}>
+                    {isDarkTheme ? <IoMdSunny /> : <IoMdMoon />}
+                </div>
             </div>
             <div className="center">
                 <h1>Logo / Title</h1>
             </div>
             <div className="right">
-                <button onClick={toggleMenu}>
-                    Open Menu
-                </button>
+                <div className='menu-btn' onClick={toggleMenu}>
+                    {showMenu ? <IoClose /> : <CgMenuGridO />}
+                </div>
+
             </div>
         </Wrapper>
     );
